@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Actividades</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Actividades</h1>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Usuario" required />
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <div id="actions" class="hidden">
+      <p>¡Bienvenido, <span id="userDisplay"></span>!</p>
+      <button onclick="logActivity('Vio productos')">Ver Productos</button>
+      <button onclick="logActivity('Agregó un producto')">Agregar Producto</button>
+      <button onclick="logActivity('Eliminó un producto')">Eliminar Producto</button>
+      <button onclick="clearActivities()">Limpiar Historial</button>
+      <button onclick="logout()">Cerrar Sesión</button>
+    </div>
+
+    <h2>Historial de Actividades</h2>
+    <ul id="activityLog"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
